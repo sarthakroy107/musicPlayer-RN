@@ -1,36 +1,42 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces */
-import { ActivityIndicator, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { ActivityIndicator, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import { addTrack, setupPlayer } from '../musicPlayerServices';
+import MusicPlayer from './screens/musicPlayer';
 
 const App = () => {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const setUp = async () =>{
     let isSetUp = await setupPlayer();
-    if(isSetUp) {
+    if (isSetUp) {
       await addTrack();
     }
-  }
+    setIsPlayerReady(isSetUp);
+  };
+
   useEffect(()=>{
     setUp();
   }, []);
 
-  // if (!isPlayerReady) {
-  //   return (
-  //     <SafeAreaView>
-  //       <ActivityIndicator/>
-  //     </SafeAreaView>
-  //   );
-  // }
-
+  if (!isPlayerReady) {
+    return (
+      <SafeAreaView>
+        <ActivityIndicator/>
+      </SafeAreaView>
+    );
+  }
+  
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <MusicPlayer/>
+      </View>
+    </SafeAreaView>
   );
 };
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

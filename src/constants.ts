@@ -4,7 +4,7 @@ import { Track } from "react-native-track-player";
 export const playlistData: Track[] = [
     {
       id: 1,
-      title: 'Zom:100',
+      title: 'Zom 100',
       artist: 'OP',
       album: 'Zom:100',
       artwork: 'https://c.saavncdn.com/734/Champagne-Talk-Hindi-2022-20221008011951-500x500.jpg',
@@ -16,7 +16,7 @@ export const playlistData: Track[] = [
       artist: 'OP',
       album: 'Oshi***',
       artwork:
-        'https://c.saavncdn.com/238/Shershaah-Original-Motion-Picture-Soundtrack--Hindi-2021-20210815181610-500x500.jpg',
+        'https://i.scdn.co/image/ab67616d0000b273175e30983b43f22a0e3085e9',
       url: require('./assets/audio/two.mp3'),
     },
     {
@@ -34,7 +34,7 @@ export const playlistData: Track[] = [
       artist: 'OP',
       album: 'Cringe',
       artwork:
-        'https://c.saavncdn.com/328/Pal-Pal-Dil-Ke-Paas-Hindi-2019-20200420150444-500x500.jpg',
+        'https://i.scdn.co/image/ab67616d0000b2734fe01e8eb5430de5e9f6f7f7',
       url: require('./assets/audio/four.mp3'),
     },
     {
