@@ -16,8 +16,9 @@ const SongSlider = () => {
       maximumValue={duration}
       thumbTintColor="#FFF"
       maximumTrackTintColor="#FFF"
+      style={styles.sliderStyle}
       />
-      <View>
+      <View style={styles.timeStampContainer}>
         <Text>{new Date(position * 1000).toISOString().substring(15,19)}</Text>
         <Text>
             {new Date((duration - position) * 1000).toISOString().substring(15, 19)}
@@ -29,4 +30,16 @@ const SongSlider = () => {
 
 export default SongSlider;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  sliderStyle:{
+    width:350,
+    height:5,
+    marginVertical:12,
+  },
+  timeStampContainer:{
+    width:320,
+    marginLeft:15,
+    flexDirection:'row',
+    justifyContent:'space-between'
+,  }
+});

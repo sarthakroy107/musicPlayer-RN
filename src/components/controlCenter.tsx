@@ -17,7 +17,6 @@ const ControlCenter = () => {
 
     const togglePlayBack = async (playback: State) => {
         const currentTrack = await TrackPlayer.getCurrentTrack();
-        console.log("PAYSTATE");
         console.log(playback === State.Ready);
 
         if (currentTrack !== null) {
@@ -33,20 +32,20 @@ const ControlCenter = () => {
 
   return (
     <View style={styles.container}>
-        <Pressable onPress={skipToPrevious}>
+        <Pressable onPress={skipToPrevious} style={styles.previousBtn}>
             <Icon
             name="skip-previous"
-            size={45}/>
+            size={50}/>
         </Pressable>
-        <Pressable onPress={()=>togglePlayBack(playbackState)}>
-            <Icon
+        <Pressable onPress={()=>togglePlayBack(playbackState)} style={styles.playPauseContainer}>
+            <Icon color={'#59595A'}
             name={playbackState === State.Playing ? 'pause' : 'play-arrow'}
             size={45}/>
         </Pressable>
-        <Pressable onPress={skipToNext}>
+        <Pressable onPress={skipToNext} style={styles.nextBtn}>
             <Icon
             name="skip-next"
-            size={45}/>
+            size={50}/>
         </Pressable>
     </View>
   );
@@ -57,5 +56,19 @@ export default ControlCenter;
 const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
+    },
+    playPauseContainer:{
+        backgroundColor:'#fff',
+       borderRadius:180,
+       padding:5,
+       margin:12,
+    },
+    previousBtn:{
+        marginTop:12,
+        marginRight:5,
+    },
+    nextBtn:{
+        marginTop:12,
+        marginLeft:5,
     },
 });

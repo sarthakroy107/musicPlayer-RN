@@ -5,15 +5,15 @@ export const playlistData: Track[] = [
     {
       id: 1,
       title: 'Zom 100',
-      artist: 'OP',
-      album: 'Zom:100',
-      artwork: 'https://c.saavncdn.com/734/Champagne-Talk-Hindi-2022-20221008011951-500x500.jpg',
+      artist: 'KANA-BOON',
+      album: 'Zom 100',
+      artwork: 'https://i.scdn.co/image/ab67706c0000da84586f7174df51e34af322ed1d',
       url: require('./assets/audio/one.mp3'),
     },
     {
       id: 2,
       title: 'Iden teitei Meltdown',
-      artist: 'OP',
+      artist: 'Enako',
       album: 'Oshi***',
       artwork:
         'https://i.scdn.co/image/ab67616d0000b273175e30983b43f22a0e3085e9',
@@ -22,17 +22,17 @@ export const playlistData: Track[] = [
     {
       id: 3,
       title: 'Shaoyou',
-      artist: 'OP',
+      artist: 'Kohana-Lam',
       album: 'Dangers In My Heart',
       artwork:
-        'https://c.saavncdn.com/191/Kesariya-From-Brahmastra-Hindi-2022-20220717092820-500x500.jpg',
+        'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx153152-3yAM7pdAcozH.jpg',
       url: require('./assets/audio/three.mp3'),
     },
     {
       id: 4,
       title: 'Kawaikute Gomen',
-      artist: 'OP',
-      album: 'Cringe',
+      artist: 'Takane',
+      album: 'Honey-Works',
       artwork:
         'https://i.scdn.co/image/ab67616d0000b2734fe01e8eb5430de5e9f6f7f7',
       url: require('./assets/audio/four.mp3'),
@@ -40,28 +40,28 @@ export const playlistData: Track[] = [
     {
       id: 5,
       title: 'Chiisana Koi No Uta',
-      artist: 'OP',
+      artist: 'Rie Takahashi',
       album: 'The Angel Next Door Spoils Me Rotten',
       artwork:
-        'https://c.saavncdn.com/807/Pathaan-Hindi-2022-20221222104158-500x500.jpg',
+        'https://i.scdn.co/image/ab67616d0000b27396191b883d8f235e670829dc',
       url: require('./assets/audio/five.mp3'),
     },
     {
         id: 6,
         title: 'STYX HELIX',
-        artist: 'ED',
+        artist: 'MYTH & ROID',
         album: 'Re:Zero',
         artwork:
-          'https://c.saavncdn.com/807/Pathaan-Hindi-2022-20221222104158-500x500.jpg',
+          'https://i.scdn.co/image/ab67616d0000b273bb23bfa930d89053e92078ec',
         url: require('./assets/audio/six.mp3'),
     },
     {
         id: 7,
         title: 'Cupid',
-        artist: 'Cover',
+        artist: 'Gura',
         album: 'Shark Vtuber',
         artwork:
-          'https://c.saavncdn.com/807/Pathaan-Hindi-2022-20221222104158-500x500.jpg',
+          'https://i.scdn.co/image/ab67616d0000b27337c0b3670236c067c8e8bbcb',
         url: require('./assets/audio/seven.mp3'),
     },
   ];

@@ -8,7 +8,7 @@ import { playlistData } from '../constants';
 import SongInfo from '../components/songInfo';
 import SongSlider from '../components/songSlider';
 import ControlCenter from '../components/controlCenter';
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 const MusicPlayer = () => {
     const [track, setTrack] = useState<Track | null>();
@@ -33,16 +33,9 @@ const MusicPlayer = () => {
             </View>
         );
     };
-    console.log("TRACK");
-    console.log(track)
   return (
     <View style={styles.container}>
-      <FlatList
-      horizontal
-      data={playlistData}
-      renderItem={renderArtWork}
-      keyExtractor={song=>song.id.toString()}
-      />
+      {renderArtWork()}
       <SongInfo track={track}/>
       <SongSlider/>
       <ControlCenter/>
@@ -54,6 +47,7 @@ export default MusicPlayer;
 
 const styles = StyleSheet.create({
     container:{
+        flex:1,
         alignItems:'center',
         justifyContent:'center',
         backgroundColor: '#001d23',
