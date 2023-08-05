@@ -28,6 +28,7 @@ const App = () => {
     );
   }
   
+  
   return (
     <SafeAreaView>
       <View style={styles.container}>
